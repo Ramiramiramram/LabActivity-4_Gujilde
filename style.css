@@ -45,6 +45,17 @@ body h1{
     color: blue;
     font-weight: bold;
 }
+.card:hover{
+    background-color: #ffffff;
+    border-width: 10px;
+    border-color: black;
+    width: 150px;
+    height: 220px;  
+    border-radius: 10px;
+    filter:drop-shadow(0 1px 15px white);
+    transition: 0.3s;
+
+}
 .grass-type{
     background-color: #7AC74C;
 }
