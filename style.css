@@ -3,7 +3,9 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(58, 58, 58);
+    background-image: url('Pokemon Dataset/Background.png');
+    background-attachment: fixed;
+    background-position:center;
 }
 body h1{
     color: white;
@@ -45,16 +47,45 @@ body h1{
     color: blue;
     font-weight: bold;
 }
-.card:hover{
+.card:hover:has(.grass){
     background-color: #ffffff;
     border-width: 10px;
     border-color: black;
     width: 150px;
     height: 220px;  
     border-radius: 10px;
-    filter:drop-shadow(0 1px 15px white);
+    filter:drop-shadow(0 1px 15px #7AC74C);
     transition: 0.3s;
-
+}
+.card:hover:has(.fire){
+    background-color: #ffffff;
+    border-width: 10px;
+    border-color: black;
+    width: 150px;
+    height: 220px;  
+    border-radius: 10px;
+    filter:drop-shadow(0 1px 15px #EE8130);
+    transition: 0.3s;
+}
+.card:hover:has(.water){
+    background-color: #ffffff;
+    border-width: 10px;
+    border-color: black;
+    width: 150px;
+    height: 220px;  
+    border-radius: 10px;
+    filter:drop-shadow(0 1px 15px #6390F0);
+    transition: 0.3s;
+}
+.card:hover:has(.normal){
+    background-color: #ffffff;
+    border-width: 10px;
+    border-color: black;
+    width: 150px;
+    height: 220px;  
+    border-radius: 10px;
+    filter:drop-shadow(0 1px 15px #A8A77A);
+    transition: 0.3s;
 }
 .grass-type{
     background-color: #7AC74C;
