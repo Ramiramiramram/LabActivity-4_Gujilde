@@ -14,7 +14,7 @@ $(document).ready(function(){
                 let types = pokemon["type"];
                 let typesHtml = "";
 
-                typesHtml.forEach(type => {
+                types.forEach(type => {
                     typesHtml += `<span class="${type}">${type}</span>`
                 })
                     $('.pokemon-container').append(
