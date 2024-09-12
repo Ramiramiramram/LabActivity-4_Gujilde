@@ -3,18 +3,19 @@ $(document).ready(function(){
     fetch("pokedex.json")
         .then((rawData) => rawData.json())
         .then(pokedex =>{
-            console.log(pokedex)
+            // console.log(pokedex)
 
             pokedex.forEach(pokemon => {
                 // console.log(pokemon);
                 
                 let id = pokemon["id"];
                 let name = pokemon["name"];
-                let image = pokemon["hires"];
+                let image = pokemon["image"]["hires"];
+                let types = pokemon["type"];
                 let typesHtml = "";
 
-                typesHtml.forEach(type =>{
-                    typesHtml += `<span class="${type}"></span>`
+                typesHtml.forEach(type => {
+                    typesHtml += `<span class="${type}">${type}</span>`
                 })
                     $('.pokemon-container').append(
                         `<div class="card">
@@ -22,10 +23,10 @@ $(document).ready(function(){
                             <ul type="none">
                             <li class="pokemon-id">#${id}</li>
                             <li class="pokemon-name">
-                                <a href="pages/pokemon.html?id=0">${image}</a>
+                                <a href="pages/pokemon.html?id=0">${name}</a>
                             </li>
                             <li class="pokemon-type">
-                                <span class="grass">Grass</span> <span class="poison">Poison</span>
+                                ${typesHtml}
                             </li>
                             </ul>
                         </div>`
